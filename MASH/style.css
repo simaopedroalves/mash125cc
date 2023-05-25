@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,900;1,300&display=swap');
+
+html {
+    font-family: 'Playfair', serif;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--whte);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    transition: background-color 2s ease-in-out;
+}
+
+
+
+:root {
+    --black: #000;
+    --gold: #ed970c;
+    --grey: #665f6d;
+    --blue: #0b65f9;
+    --red: #ff0000;
+    --white: #fff;
+    --white-only: #fff;
+}
+
+.dark-theme {
+    --black: #fff;
+    --white: #000;
+}
+
+p {
+    color: var(--black);
+    
+}
+
+.logo {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+header {
+    background: var(--black);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    /* display: flex;
+    align-items: center;
+    gap: 3rem */
+}
+
+.fa-circle-half-stroke {
+    color: var(--gold);
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    width: min-content;
+}
+
+img {
+    object-fit: cover;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* ================================
+            NAV-BAR
+   ===============================*/
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    width: 1.5em;
+    height: 3px;
+    background-color: var(--gold);
+    border-radius: 3px;
+    position: relative;
+    }
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 6px;
+}
+
+.nav-toggle-label span::after {
+    top: 6px;
+}
+
+
+nav {
+     position: absolute;
+     text-align: left;
+     top: 100%;
+     left: 0;
+     background: var(--black);
+     width: 100%;
+     transform: scale(1, 0);
+     transform-origin: top;
+     transition: transform 400ms ease-in-out;
+
+    }
+
+nav ul {
+      margin: 0;
+      padding: 0;
+
+}
+
+nav li {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+     color: var(--gold);
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem auto 0 auto;
+    
+}
+
+.titulo img {
+    max-width: 80%;
+}
+
+
+/* 
+=======================================
+                HISTORIA 
+=======================================*/
+
+.historia {
+   padding: 1rem;
+   text-align: justify;
+  
+}
+
+/*
+=========================================
+        CURIOSIDADES
+=========================================
+*/
+.daimler {
+    color: var(--black);
+    font-size: 1rem;
+   
+}
+
+.daimler-link {
+    display: grid;
+    justify-content: center;
+}
+
+.first-bike-ever {
+    margin: 1rem;
+    border-radius: 10% 0 ;
+}
+
+figcaption {
+    color: var(--grey);
+    text-align: center;
+}
+
+.curiosidades {
+    display: grid;
+    justify-content: center;
+}
+
+.Curiosidades {
+    text-align: justify;
+    padding: 0;
+    margin: 0 1rem;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ilegal {
+    color: var(--red);
+    font-weight: bold;
+}
+/* 
+======================================
+       INSTAGRAM
+===================================== */
+
+.fotos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+    margin: 4rem 0;
+}
+
+.insta-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+}
+
+.insta-fotos img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+=========================================
+Destaques a amarelo 
+=======================================
+*/
+.emphasis {
+    text-decoration: underline;
+    font-style: italic;
+    border-radius: 5%;
+    background-color: var(--gold);
+    color: var(--black);
+    font-style: italic;
+}
+
+.emphasis:hover {
+    color: var(--blue);
+}
+
+
+h1, h2 {
+   text-transform: uppercase;
+   color: var(--gold);
+   text-align: center;
+}
+
+h2 {
+    line-height: 1.5rem;
+}
+
+hr {
+    min-height: 0.5rem;
+    background-color: var(--gold);
+    max-width: 60%;
+    border-radius: 1rem;
+    margin: 3rem auto;
+    
+}
+
+/* ====================================
+                MOTAS
+=====================================*/
+
+.bikeimages {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    gap: 0rem;
+}
+
+.articles {
+    display: grid;
+    justify-items: center;
+}
+
+.bikeimages img {
+    max-width: 60%;
+    margin: 1rem;
+    padding: 1rem;
+}
+ 
+article {
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--gold);
+    border-radius: 1rem;
+    line-height: 1rem;
+    margin: 1rem;
+    padding: 0 1rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--black);
+    /* line-height: 1rem; */
+}
+
+/*==========================
+           FORMULARIO
+============================*/
+fieldset {
+    display: grid;
+    justify-content: center;
+    
+}
+
+form div input{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    align-content: center;
+    justify-content: center;
+    min-width: 18rem;
+    min-height: 5vh;
+    border-radius: 5px;
+    border: solid 3px var(--black);
+}
+form div label {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;}
+    
+ 
+
+/* ====================
+          BUTTON 
+========================*/
+
+#submit {
+    cursor: pointer;
+    background-color: var(--blue);
+    margin-top: 2em;
+   
+}
+
+#submit:hover {
+    transform: scale(1.1);
+}
+
+/*==========================
+              RODAPÉ
+=============================*/
+
+footer {
+    margin: 0 3rem 4rem 3rem;
+    overflow: hidden;
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.mashLogo { max-width: 8em; } 
+
+.one {
+    display: flex;
+    justify-content: center;
+    grid-column: span 2;
+    padding: 2rem;
+   
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    grid-column: span 1;
+}
+
+.fa-instagram {
+    color: var(--gold);
+    font-size: 3rem;
+}
+
+.made-by {
+    text-align: center;
+    grid-column: span 1;
+}
+
+.byme {
+    font-size: 1rem;
+    color: var(--gold);
+    font-size: 1rem;
+    grid-column: span 1;
+}
+
+
+/* ======================================
+        NAV-BAR  PARA PC E TABLETS
+   ====================================*/
+
+   @media (min-width: 850px) {
+    
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        /* grid-template-columns: 1fr auto minmax(900px, 4fr) 1fr; */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logo {
+        grid-column: span 1;
+    }
+
+    .fa-circle-half-stroke {
+        right: 3rem;
+    }
+     
+    nav {
+        all: unset;
+        grid-column: span 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav li {
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+
+    
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: var(--gold);
+        position: absolute;
+        top: -0.2rem;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 500ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: left;
+         }
+
+    h1, h2{
+        font-size: 3rem;
+    }
+
+    h2 {
+        line-height: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .historia {
+        padding: 0 10rem;
+    }
+
+    .curiosidades {
+        padding: 0 10rem;
+    }
+
+    /* ««««««««««««««««« INSTAGRAM »»»»»»»»»»»»»»»»»»»»»»»»»»» */
+     
+    .fotos {
+        padding: 0 10rem;
+        margin: 2rem 0;
+    }
+    
+    .insta-fotos {
+        display: grid;
+        gap: 1rem;
+      
+    }
+    
+/* «««««««««««««««««««««««  MOTAS »»»»»»»»»»»»»»»»»»»»» */
+
+    .bikeimages {
+        padding: 0 10rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+    }
+
+    .bikeimages img {
+        max-width: 80%;
+    }
+
+    .articles h3 {
+        line-height: 1.5rem;
+    }
+    /* legend {
+        font-size: 1.5rem;
+    }
+
+    div fieldset {
+        display: grid;
+        justify-content: center;
+        margin: 0 15rem;
+    } */
+
+    
+
+    /* div form {
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+
+    form div input {
+        min-width: 30rem;
+        min-height: 10vh;
+    } */
+
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 3rem 10rem;
+    }
+
+    .one, .two {
+        grid-column: span 1;
+    }
+
+    .fa-instagram {
+        font-size: 4rem;
+    }
+}
